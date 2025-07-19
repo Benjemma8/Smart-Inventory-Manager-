@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Inventory Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- LOGIN PAGE -->
+  <div id="loginPage" class="container fade-in">
+    <img src="3mtt-logo.png" alt="3MTT Logo" class="logo" />
+    <h2>Store Login</h2>
+    <input type="password" id="passwordInput" placeholder="Enter Password" />
+    <button onclick="checkPassword()">Login</button>
+  </div>
+
+  <!-- MAIN APP -->
+  <div id="appContent" style="display:none;">
+    <div class="container fade-in">
+      <img src="3mtt-logo.png" alt="3MTT Logo" class="logo-small" />
+      <h1>Smart Inventory Manager</h1>
+      <div id="todayDate"></div>
+
+      <!-- NAVIGATION -->
+      <div class="nav-buttons">
+        <button onclick="showSection('inventory')">➕ Add Inventory</button>
+        <button onclick="showSection('sales')">🛒 Record Sale</button>
+        <button onclick="showSection('view')">📦 Current Inventory</button>
+      </div>
+    </div>
+
+    <!-- ADD INVENTORY -->
+    <div id="inventorySection" class="container section">
+      <h3>Add Inventory</h3>
+      <input type="text" id="productName" placeholder="Product Name" />
+      <input type="number" id="productPrice" placeholder="Unit Price (₦)" />
+      <input type="number" id="productQty" placeholder="Quantity" />
+      <button onclick="addProduct()">Add Product</button>
+    </div>
+
+    <!-- RECORD SALE -->
+    <div id="salesSection" class="container section">
+      <h3>Record Sale</h3>
+      <select id="saleProduct"></select>
+      <input type="number" id="saleQty" placeholder="Quantity Sold" />
+      <button onclick="recordSale()">Record Sale</button>
+    </div>
+
+    <!-- VIEW INVENTORY -->
+    <div id="viewSection" class="container section">
+      <h3>Current Inventory</h3>
+      <table id="inventoryTable">
+        <thead><tr><th>Product</th><th>Price (₦)</th><th>Qty</th></tr></thead>
+        <tbody></tbody>
+      </table>
+
+      <h3>Sales Today</h3>
+      <table id="salesTable">
+        <thead><tr><th>Product</th><th>Qty Sold</th><th>Total</th></tr></thead>
+        <tbody></tbody>
+      </table>
+
+      <h3>Activity Logs</h3>
+      <div id="logEntries"></div>
+
+      <button id="exportBtn" onclick="exportSales()">📁 Export Daily Report</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
