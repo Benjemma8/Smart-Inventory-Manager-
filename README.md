@@ -40,7 +40,7 @@ smart-inventory-manager/
 
 📦 Run Locally
 
-git clone https://github.com/Benjemma8/smart-inventory-manager.git
+git clone https://github.com/Benjemma8/Smart-Inventory-Manager-
 cd smart-inventory-manager
 open index.html  # or drag into your browser
 
