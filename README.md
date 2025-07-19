@@ -7,10 +7,7 @@ A simple yet powerful offline inventory management app built for small business 
     👨‍💻 Fellow: Emmanuel Ocholi Benjamin | Cloud Computing Track
     🪪 Fellow ID: FE/24/9593447324
 
-
-
-Replace this with an actual screenshot from your deployed Netlify app.
-🔗 Live Demo
+🔗 Live Demo: https://smartinventorymanage.netlify.app/
 
 👉 Try it on Netlify
 📦 GitHub Repo
@@ -54,7 +51,7 @@ You can easily host it on:
     GitHub Pages
 
 🧪 How to Use
-    Login with the password: storepass (can be changed in script.js)
+    Login with the password
     Use the navigation buttons:
 
         ➕ Add Inventory
